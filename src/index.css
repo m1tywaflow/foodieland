@@ -1,0 +1,4 @@
+@import "tailwindcss";
+.group-hover\:rotate-360:hover {
+  transform: rotate(360deg);
+}
