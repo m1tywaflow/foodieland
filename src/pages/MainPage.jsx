@@ -5,6 +5,8 @@ import ManyRecipes from "../components/ManyRecipes";
 import CanBeChef from "../components/CanBeChef";
 import InstaSection from "../components/InstaSection";
 import MoreRecipes from "../components/MoreRecipes";
+import InBox from "../components/InBox";
+
 const MainPage = () => {
   return (
     <>
@@ -15,6 +17,8 @@ const MainPage = () => {
         <CanBeChef />
         <InstaSection/>
         <MoreRecipes/>
+        <InBox/>
+        
       </div>
     </>
   );

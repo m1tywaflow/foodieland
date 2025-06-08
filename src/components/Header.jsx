@@ -7,8 +7,8 @@ const Header = () => {
     <header>
       <div className="flex justify-between pt-4">
         <div>
-          <h1 className="font-lobster text-4xl">
-            Foodieland <span className="text-orange-400">.</span>
+          <h1 className="text-4xl font-lobster pl-10">
+            Foodieland<span className="text-orange-500">.</span>
           </h1>
         </div>
         <div className="text-xl flex gap-10">
