@@ -2,6 +2,7 @@ import React from "react";
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebookF } from "react-icons/fa6";
 import { BsTwitter } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
@@ -12,32 +13,65 @@ const Header = () => {
           </h1>
         </div>
         <div className="text-xl flex gap-10">
-          <a href="#" className="hover:text-orange-400 transition duration-300">
-            Home
-          </a>
-          <a href="#" className="hover:text-orange-400 transition duration-300">
+          <Link
+            className="hover:text-orange-400 transition duration-300"
+            to={"/"}
+          >
+            <>Home</>
+          </Link>
+          <Link
+            to={"/recipes"}
+            className="hover:text-orange-400 transition duration-300"
+          >
             Recipes
-          </a>
-          <a href="#" className="hover:text-orange-400 transition duration-300">
+          </Link>
+
+          <Link
+            to={"/blog"}
+            className="hover:text-orange-400 transition duration-300"
+          >
             Blog
-          </a>
-          <a href="#" className="hover:text-orange-400 transition duration-300">
+          </Link>
+          <Link
+            to={"/contact"}
+            className="hover:text-orange-400 transition duration-300"
+          >
             Contact
-          </a>
-          <a href="#" className="hover:text-orange-400 transition duration-300">
+          </Link>
+          <Link
+            to={"/about-us"}
+            className="hover:text-orange-400 transition duration-300"
+          >
             About us
-          </a>
+          </Link>
+          <Link
+            to={"/guide"}
+            className="hover:text-orange-400 transition duration-300"
+          >
+            Guide
+          </Link>
         </div>
         <div className="text-xl flex gap-5 pr-10">
-          <a href="#" className="text-2xl hover:text-orange-400">
+          <Link
+            to={"*"}
+            className="hover:text-orange-400 transition duration-300"
+          >
             <FaFacebookF />
-          </a>
-          <a href="#" className="text-2xl hover:text-orange-400">
+          </Link>
+
+          <Link
+            to={"*"}
+            className="hover:text-orange-400 transition duration-300"
+          >
             <BsTwitter />
-          </a>
-          <a href="#" className="text-2xl hover:text-orange-400">
+          </Link>
+          
+          <Link
+            to={"*"}
+            className="hover:text-orange-400 transition duration-300"
+          >
             <FiInstagram />
-          </a>
+          </Link>
         </div>
       </div>
     </header>

@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MainPage from "./pages/MainPage";
+import RecipePage from "./pages/RecipePage";
+import AllRecipesPage from "./pages/AllRecipesPage";
+import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import GuidePage from "./pages/GuidePage";
 import "./index.css";
 const App = () => {
   return (
@@ -11,6 +16,11 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/recipe/:id" element={<RecipePage />} />
+          <Route path="/recipes" element={<AllRecipesPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/guide" element={<GuidePage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

@@ -11,7 +11,7 @@ const InstaSection = () => {
   const closeModal = () => setModalImage(null);
 
   return (
-    <div className="pt-30 max-w-2/3 mx-auto rounded-4xl pb-100">
+    <div className="pt-12 max-w-2/3 mx-auto rounded-4xl pb-20">
       <div className="text-center">
         <h1 className="text-5xl">Check out @foodieland on Instagram</h1>
         <p className="pt-4 font-light text-lg">

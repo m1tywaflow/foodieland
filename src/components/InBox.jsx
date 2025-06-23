@@ -4,7 +4,7 @@ import rightImg from "../assets/rightImg.jpg";
 
 const InBox = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#f8f9fa]">
+    <div className="flex justify-center items-center min-h-120 bg-[#f8f9fa]">
       <div className="relative bg-[#eafcff] rounded-3xl py-16 px-4 overflow-hidden w-[1240px]">
         <img
           src={leftImg}
