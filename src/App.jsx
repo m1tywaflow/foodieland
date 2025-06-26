@@ -8,6 +8,7 @@ import AllRecipesPage from "./pages/AllRecipesPage";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import GuidePage from "./pages/GuidePage";
+import ContactPage from "./pages/ContactPage"
 import "./index.css";
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/recipes" element={<AllRecipesPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/guide" element={<GuidePage />} />
+          <Route path="/contact" element={<ContactPage/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
