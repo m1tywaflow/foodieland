@@ -1,5 +1,6 @@
 import React from "react";
 import chef from "../assets/chef.jpg";
+import { Link } from "react-router-dom";
 
 const CanBeChef = () => {
   return (
@@ -15,14 +16,20 @@ const CanBeChef = () => {
             ingredients and a love for cooking. Start small, try new things, and
             enjoy the process!
           </p>
-          <button className="mt-10 w-[150px] h-[50px] rounded-2xl bg-black text-white hover:bg-orange-400 transition duration-200">
-            Learn More
-          </button>
         </div>
-
+        <Link
+          to={"/guide"}
+          className="mt-10 w-[250px] h-[30px] rounded-2xl bg-black text-white hover:bg-orange-400 transition duration-200 text-center"
+        >
+          Learn More
+        </Link>
         {/* Правый блок с изображением */}
         <div className="w-full lg:w-[660px]">
-          <img src={chef} alt="chef" className="w-full h-auto object-cover rounded-xl" />
+          <img
+            src={chef}
+            alt="chef"
+            className="w-full h-auto object-cover rounded-xl"
+          />
         </div>
       </div>
     </div>

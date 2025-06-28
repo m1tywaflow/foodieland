@@ -1,9 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // 1. импортируем useNavigate
 import recipesData, { NewrecipesData } from "../data/recipesData";
-import cooking from "../assets/cooking.jpg";
-import cooking2 from "../assets/cooking2.jpg";
-
 const AllRecipesPage = () => {
   const manyRecipe = [...recipesData, ...NewrecipesData];
   const navigate = useNavigate(); // 2. инициализируем
@@ -14,16 +11,29 @@ const AllRecipesPage = () => {
 
   return (
     <>
-      <div className="max-w-6xl mx-auto p-12">
-        <h2 className="text-2xl">
-          Here you can see all the recipes added to our site, by clicking on the
-          card you will go to the page with the recipe itself, where you can
-          watch a video of the preparation and all the ingredients you
-          need.IMGIMGIMGIGIGIFISDIFSDFHSDJHIMGIMGIMGIMGIMG
-        </h2>
+      <div className="container mx-auto px-6 py-12">
+        <div className="flex flex-col items-center gap-8 mb-12">
+          <div className="text-lg leading-relaxed text-gray-700 text-center lg:w-2/3">
+            Here you can see all the recipes added to our site. By clicking on
+            the card you will go to the page with the recipe itself, where you
+            can watch a video of the preparation and all the ingredients you
+            need.
+            <br />
+            <br />
+            Each recipe is created with care and includes detailed instructions
+            to make your cooking experience easier and more enjoyable. Whether
+            you're a beginner or an experienced chef, you’ll find something new
+            to try.
+            <br />
+            <br />
+            We also provide nutritional information, so you can be confident in
+            what you’re eating. Explore our growing collection and get inspired
+            to cook something delicious today!
+          </div>
+        </div>
       </div>
 
-      <div className="max-w-6xl mx-auto p-4 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="max-w-6xl mx-auto p-4 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-40">
         {manyRecipe.map((recipe, index) => (
           <div
             key={index}
@@ -42,6 +52,11 @@ const AllRecipesPage = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="text-center pt-20 pb-30">
+        <h1 className="text-3xl font-light">
+          We will add more delicious recipes for you soon..
+        </h1>
       </div>
     </>
   );

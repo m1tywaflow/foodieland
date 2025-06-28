@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 import { blogPosts, tastyRecipes } from "/src/data/blogData";
-
+import { Link } from "react-router-dom";
 function BlogPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       <h1 className="text-4xl font-bold mb-2">Blog & Article</h1>
       <p className="text-gray-500 mb-6 max-w-2xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore
       </p>
 
       <div className="flex items-center gap-4 mb-10">
@@ -23,7 +24,7 @@ function BlogPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Main blog posts */}
         <div className="lg:col-span-2 space-y-8">
-          {blogPosts.map(post => (
+          {blogPosts.map((post) => (
             <div key={post.id} className="flex flex-col md:flex-row gap-6">
               <img
                 src={post.image}
@@ -37,6 +38,13 @@ function BlogPage() {
                   <span>{post.author}</span> • <span>{post.date}</span>
                 </div>
               </div>
+              <div>
+                <Link to="/recipes">
+                  <button className="w-[100px] h-[50px] text-white bg-black rounded-2xl hover:bg-orange-400 duration-200 transition cursor-pointer">
+                    Go here
+                  </button>
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -44,7 +52,7 @@ function BlogPage() {
         {/* Sidebar with tasty recipes */}
         <aside className="space-y-6">
           <h3 className="text-xl font-semibold mb-4">Tasty Recipes</h3>
-          {tastyRecipes.map(recipe => (
+          {tastyRecipes.map((recipe) => (
             <div key={recipe.id} className="flex gap-4 items-center">
               <img
                 src={recipe.image}
